@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.AddCourse">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Add Course"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/my_toolbar"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+            app:layout_constraintVertical_bias=".05" />
+
+        <TableLayout
+            android:id="@+id/tableLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="120dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+            app:layout_constraintVertical_bias=".05">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="45dp"
+                    android:text="Course Title:"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/courseTitleTxt"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:freezesText="true"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="45dp"
+                    android:text="Start Date:"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/startDateTxt"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:freezesText="true"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="45dp"
+                    android:text="End Date: "
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/endDateTxt"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:freezesText="true"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="45dp"
+                    android:text="Instructor:"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/instructorNameTxt"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:freezesText="true"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="45dp"
+                    android:text="Instructor Phone:"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/instructorPhoneTxt"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:freezesText="true"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="140dp"
+                    android:layout_height="45dp"
+                    android:text="Instructor Email:"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/instructorEmailTxt"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:freezesText="true"
+                    android:textSize="18sp" />
+            </TableRow>
+
+        </TableLayout>
+
+        <TextView
+            android:id="@+id/statusTextView"
+            android:layout_width="160dp"
+            android:layout_height="90dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="215dp"
+            android:text="Status:"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/statusRadioGroup"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout1" />
+
+        <RadioGroup
+            android:id="@+id/statusRadioGroup"
+            android:layout_width="140dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="10dp"
+            app:layout_constraintLeft_toRightOf="@+id/statusTextView"
+            app:layout_constraintTop_toBottomOf="@+id/tableLayout1">
+
+            <RadioButton
+                android:id="@+id/planToTakeRB"
+                android:layout_width="140dp"
+                android:layout_height="45dp"
+                android:text="Plan to Take"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/inProgressRB"
+                android:layout_width="140dp"
+                android:layout_height="45dp"
+                android:text="In Progress"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/completedRB"
+                android:layout_width="140dp"
+                android:layout_height="45dp"
+                android:text="Completed"
+                android:textSize="16sp" />
+
+            <RadioButton
+                android:id="@+id/droppedRB"
+                android:layout_width="140dp"
+                android:layout_height="45dp"
+                android:text="Dropped"
+                android:textSize="16sp" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onAddCourseClicked"
+            android:text="Add Course"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/my_toolbar"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+            app:layout_constraintVertical_bias=".91" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>

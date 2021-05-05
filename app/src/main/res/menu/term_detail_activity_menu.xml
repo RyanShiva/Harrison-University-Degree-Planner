@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_home"
+        android:icon="@drawable/ic_baseline_home_24"
+        android:title="@string/action_home"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/action_update_term"
+        android:title="@string/action_update_term"
+        app:showAsAction="never"/>
+
+    <item android:id="@+id/action_delete_term"
+        android:title="@string/action_delete_term"
+        app:showAsAction="never"/>
+
+</menu>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="edu.wgu.harrisonuniversitydegreeplanner">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HarrisonUniversityDegreePlanner">
+        <activity android:name=".Activities.Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <receiver
+            android:name=".MyAlarm"
+            android:enabled="true"
+            android:exported="true" />
+
+        <activity
+            android:name=".Activities.ReportAssessmentsByType"
+            android:parentActivityName=".Activities.GenerateReportMenu" />
+        <activity
+            android:name=".Activities.ReportCoursesByStatus"
+            android:parentActivityName=".Activities.GenerateReportMenu" />
+        <activity
+            android:name=".Activities.GenerateReportMenu"
+            android:parentActivityName=".Activities.MainActivity" />
+        <activity
+            android:name=".Activities.CourseSearch"
+            android:parentActivityName=".Activities.MainActivity" />
+        <activity
+            android:name=".Activities.SetAssessmentAlert"
+            android:parentActivityName=".Activities.AssessmentDetail" />
+        <activity
+            android:name=".Activities.SetCourseAlert"
+            android:parentActivityName=".Activities.CourseDetail" />
+        <activity
+            android:name=".Activities.UpdateCourseNote"
+            android:parentActivityName=".Activities.CourseNoteList" />
+        <activity
+            android:name=".Activities.AddCourseNote"
+            android:parentActivityName=".Activities.CourseNoteList" />
+        <activity
+            android:name=".Activities.CourseNoteList"
+            android:parentActivityName=".Activities.CourseDetail" />
+        <activity
+            android:name=".Activities.AssessmentDetail"
+            android:parentActivityName=".Activities.AssessmentList" />
+        <activity
+            android:name=".Activities.AssessmentList"
+            android:parentActivityName=".Activities.CourseDetail" />
+        <activity
+            android:name=".Activities.AddCourse"
+            android:parentActivityName=".Activities.CourseList" />
+        <activity
+            android:name=".Activities.UpdateCourse"
+            android:parentActivityName=".Activities.CourseDetail" />
+        <activity
+            android:name=".Activities.CourseDetail"
+            android:parentActivityName=".Activities.CourseList" />
+        <activity
+            android:name=".Activities.AddTerm"
+            android:parentActivityName=".Activities.TermList" />
+        <activity
+            android:name=".Activities.CourseList"
+            android:parentActivityName=".Activities.TermDetail" />
+        <activity
+            android:name=".Activities.UpdateTerm"
+            android:parentActivityName=".Activities.TermDetail" />
+        <activity
+            android:name=".Activities.TermDetail"
+            android:parentActivityName=".Activities.TermList" />
+        <activity
+            android:name=".Activities.TermList"
+            android:parentActivityName=".Activities.MainActivity" />
+        <activity
+            android:name=".Activities.AddObjectiveAssessment"
+            android:parentActivityName=".Activities.AssessmentList" />
+        <activity
+            android:name=".Activities.AddPerformanceAssessment"
+            android:parentActivityName=".Activities.AssessmentList" />
+        <activity
+            android:name=".Activities.UpdateObjectiveAssessment"
+            android:parentActivityName=".Activities.AssessmentDetail" />
+        <activity
+            android:name=".Activities.UpdatePerformanceAssessment"
+            android:parentActivityName=".Activities.AssessmentDetail" />
+        <activity android:name=".Activities.MainActivity" />
+    </application>
+
+</manifest>

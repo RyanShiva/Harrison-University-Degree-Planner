@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.UpdatePerformanceAssessment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/my_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+
+            android:background="?attr/colorPrimary"
+            android:elevation="4dp"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Performance Assessment"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/my_toolbar"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+            app:layout_constraintVertical_bias="0.1" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="70dp"
+            android:layout_marginTop="110dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="220dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+            app:layout_constraintVertical_bias="0.214">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="45dp"
+                    android:text="Assessment Title:"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/assessmentTitleTxt"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:freezesText="true"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="45dp"
+                    android:text="Start Date:"
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/startDateTxt"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:freezesText="true"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:layout_width="160dp"
+                    android:layout_height="45dp"
+                    android:text="End Date: "
+                    android:textSize="18sp" />
+
+                <EditText
+                    android:id="@+id/endDateTxt"
+                    android:layout_width="200dp"
+                    android:layout_height="45dp"
+                    android:freezesText="true"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="160dp"
+                android:layout_height="120dp"
+                app:layout_constraintLeft_toLeftOf="@+id/typeRadioGroup"
+                app:layout_constraintTop_toBottomOf="@+id/typeRadioGroup">
+
+                <TextView
+                    android:id="@+id/outcomeLabelTxt"
+                    android:layout_width="160dp"
+                    android:layout_height="90dp"
+                    android:layout_marginTop="10dp"
+                    android:text="Outcome: "
+                    android:textSize="18sp" />
+
+                <RadioGroup
+                    android:id="@+id/outcomeRadioGroup"
+                    android:layout_width="140dp"
+                    android:layout_height="120dp"
+                    android:layout_marginTop="10dp">
+
+                    <RadioButton
+                        android:id="@+id/passedRB"
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"
+                        android:text="Passed"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/failedRB"
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"
+                        android:text="Failed"
+                        android:textSize="16sp" />
+
+                    <RadioButton
+                        android:id="@+id/notAttemptedRB"
+                        android:layout_width="140dp"
+                        android:layout_height="40dp"
+                        android:text="Not Attempted"
+                        android:textSize="16sp" />
+
+                </RadioGroup>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onUpdateAssessmentClicked"
+            android:text="Update Assessment"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/my_toolbar"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/my_toolbar"
+            app:layout_constraintVertical_bias="0.75" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
