@@ -16,4 +16,7 @@ Released 5/5/2020
 Android Studio 4.1.3  
 
 ## Login
-Login with the username 'test' and password 'test'.
+Login with the username 'test' and password 'test'
+
+## User Guide
+Refer to document 'Degree Planner User Guide.docx'
